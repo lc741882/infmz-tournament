@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>INFMZ 2v2 BO6 Tournament</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #00ffcc;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0 20px 0;
+      border: none;
+      border-radius: 4px;
+    }
+    label {
+      font-weight: bold;
+    }
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #00ddbb;
+    }
+    .container {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .rules {
+      margin-top: 40px;
+    }
+    .rules h2 {
+      color: #00ffcc;
+    }
+    .rules ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .rules li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to the 2nd INFMZ Tournament!</h1>
+    <p>This is our second official <strong>INFMZ Call of Duty: Black Ops 6 Tournament</strong> and it's going to be 🔥. The event will be a <strong>2v2 format</strong>, open to all players who register and pay a small entry fee of $5 per player. 100% of the entry fees will be added to the prize pool.</p>
+
+    <h2>Tournament Details:</h2>
+    <ul>
+      <li><strong>Date:</strong> Sunday, July 27th, 2025</li>
+      <li><strong>Time:</strong> 8:00 PM CST</li>
+      <li><strong>Format:</strong> 2v2, CDL Weapons, Tactical, Lethal, Perks and etc.. ONLY.</li>
+      <li><strong>Entry Fee:</strong> $5 per player</li>
+    </ul>
+
+    <h2>Register Below</h2>
+    <form action="https://formspree.io/f/mzzvbwro" method="POST">
+      <input type="hidden" name="_redirect" value="thankyou.html">
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="codUsername">Call of Duty Username (Include ID#):</label>
+      <input type="text" id="codUsername" name="Call of Duty Username" required>
+
+      <label for="discordName">Discord Name:</label>
+      <input type="text" id="discordName" name="Discord Name" required>
+
+      <label for="partnerName">Partner's Call of Duty Username:</label>
+      <input type="text" id="partnerName" name="Partner Username" required>
+
+      <label for="teamName">Team Name (Optional):</label>
+      <input type="text" id="teamName" name="Team Name">
+
+      <label for="paymentMethod">Preferred Payment Method (PayPal, CashApp, etc.):</label>
+      <input type="text" id="paymentMethod" name="Payment Method" required>
+
+      <label for="paymentUsername">Payment Username (for fee request):</label>
+      <input type="text" id="paymentUsername" name="Payment Username" required>
+
+      <label>
+        <input type="checkbox" name="Terms Accepted" required>
+        I accept the rules and terms of the INFMZ Tournament.
+      </label>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="rules">
+      <h2>Tournament Rules & Terms</h2>
+      <ul>
+        <li>Entry Fee: $5 per player must be paid before July 27th.</li>
+        <li>Format: 2v2 — CDL Weapons, Tactical, Lethal, Perks and etc.. ONLY..</li>
+        <li>Game Mode: Hard Point, maps format announced day of tournament.</li>
+        <li>Platform: All platforms allowed, cross-play must be enabled.</li>
+        <li>Communication: Be in the Discord voice chat 15 minutes before start time.</li>
+        <li>Disconnection: Report immediately to allow possible replay.</li>
+        <li>No Cheating/Glitching: Immediate ban and forfeiture if caught.</li>
+        <li>Streaming: Encouraged — tag INFMZ if posting highlights.</li>
+        <li>Prizes: Sent to winner’s preferred payment method after verification.</li>
+        <li>Refunds: No refunds unless tournament is canceled.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
