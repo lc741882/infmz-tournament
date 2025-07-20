@@ -1,0 +1,11 @@
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-relative-links
+
+exclude:
+  - README.md
+  # DO NOT list CNAME here
