@@ -2,63 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INFMZ 2v2 BO6 Tournament</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       background-color: #0e0e0e;
       color: #ffffff;
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
+      padding: 4vw;
+      max-width: 100%;
+      margin: 0 auto;
+      font-size: clamp(14px, 4vw, 16px);
+      overflow-x: hidden;
     }
-    h1, h2 {
+    h1 {
       color: #00ffcc;
+      font-size: clamp(24px, 6.5vw, 28px);
+      margin-bottom: 3vw;
+      text-align: center;
+    }
+    h2 {
+      color: #00ffcc;
+      font-size: clamp(18px, 5.5vw, 22px);
+      margin-top: 5vw;
+      text-align: center;
+    }
+    p, li {
+      line-height: 1.6;
+      font-size: clamp(14px, 4vw, 15px);
     }
     input, select, textarea {
       width: 100%;
-      padding: 8px;
-      margin: 8px 0 20px 0;
+      padding: 2.5vw;
+      margin: 2vw 0 4vw 0;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
+      font-size: clamp(13px, 3.5vw, 15px);
+      box-sizing: border-box;
+      background-color: #2a2a2a;
+      color: #ffffff;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #00ffcc;
     }
     label {
       font-weight: bold;
+      font-size: clamp(13px, 3.5vw, 15px);
+      display: block;
+      margin-bottom: 1vw;
     }
     button {
       background-color: #00ffcc;
       color: #000;
-      padding: 10px 20px;
+      width: 150px;
+      height: 150px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
+      font-size: clamp(14px, 4vw, 16px);
+      margin: 3vw auto;
+      display: block;
+      touch-action: manipulation;
+      text-align: center;
+      line-height: 150px;
     }
     button:hover {
       background-color: #00ddbb;
     }
     .container {
       background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 5vw;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .rules {
-      margin-top: 40px;
-    }
-    .rules h2 {
-      color: #00ffcc;
+      margin-top: 8vw;
     }
     .rules ul {
       list-style-type: disc;
-      padding-left: 20px;
+      padding-left: 6vw;
     }
     .rules li {
-      margin-bottom: 10px;
+      margin-bottom: 3vw;
+    }
+    /* Tablet and medium screens */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 3vw;
+      }
+      .container {
+        padding: 4vw;
+      }
+      h1 {
+        font-size: clamp(22px, 6vw, 26px);
+      }
+      h2 {
+        font-size: clamp(16px, 5vw, 20px);
+      }
+      input, select, textarea {
+        padding: 3vw;
+        margin: 2.5vw 0 5vw 0;
+        font-size: clamp(13px, 3.8vw, 14px);
+      }
+      button {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+      }
+      .rules ul {
+        padding-left: 5vw;
+      }
+    }
+    /* Small phones */
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 2vw;
+      }
+      .container {
+        padding: 3vw;
+      }
+      h1 {
+        font-size: clamp(18px, 5.5vw, 22px);
+      }
+      h2 {
+        font-size: clamp(14px, 4.5vw, 18px);
+      }
+      p, li, label {
+        font-size: clamp(12px, 3.5vw, 14px);
+      }
+      input, select, textarea {
+        padding: 3.5vw;
+        font-size: clamp(12px, 3.5vw, 13px);
+      }
+      button {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: clamp(12px, 4vw, 14px);
+      }
+      .rules ul {
+        padding-left: 6vw;
+      }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
     <h1>Welcome to the 2nd INFMZ Tournament!</h1>
     <p>This is our second official <strong>INFMZ Call of Duty: Black Ops 6 Tournament</strong> and it's going to be 🔥. The event will be a <strong>2v2 format</strong>, open to all players who register and pay a small entry fee of $5 per player. 100% of the entry fees will be added to the prize pool.</p>
@@ -97,10 +191,11 @@
       <input type="text" id="paymentUsername" name="Payment Username" required>
 
       <label>
+        <span style="display: block; margin: 0 auto; text-align: center; width: fit-content;">
+              I accept the rules and terms of the INFMZ Tournament.
+        </span>
         <input type="checkbox" name="Terms Accepted" required>
-        I accept the rules and terms of the INFMZ Tournament.
       </label>
-
       <button type="submit">Register</button>
     </form>
 
@@ -108,7 +203,7 @@
       <h2>Tournament Rules & Terms</h2>
       <ul>
         <li>Entry Fee: $5 per player must be paid before July 27th.</li>
-        <li>Format: 2v2 — CDL Weapons, Tactical, Lethal, Perks and etc.. ONLY..</li>
+        <li>Format: 2v2 — CDL Weapons, Tactical, Lethal, Perks and etc.. ONLY.</li>
         <li>Game Mode: Hard Point, maps format announced day of tournament.</li>
         <li>Platform: All platforms allowed, cross-play must be enabled.</li>
         <li>Communication: Be in the Discord voice chat 15 minutes before start time.</li>
@@ -120,6 +215,6 @@
       </ul>
     </div>
   </div>
-
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'963ed3566e2353cc',t:'MTc1MzMxMTk1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
